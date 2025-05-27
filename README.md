@@ -16,18 +16,19 @@ Pandas / NumPy
 Jupyter Notebook
 
 🧬 Methodology
-Preprocessing: Clean and tokenize job titles.
-Embeddings:
-Generate job title embeddings using BERT and Doc2Vec.
-Generate keyword embeddings using same techniques.
-Similarity Scoring:
-Compute cosine similarity between job titles and keywords.
-Apply weighted average of BERT and Doc2Vec scores based on user-defined preference.
-Ranking:
-Candidates sorted in descending order of weighted score.
-User can “⭐ star” candidates to re-rank list using this supervised feedback.
-Re-Ranking Logic:
-After starring, the ideal candidate vector is used to re-score remaining candidates based on vector proximity.
+1. Preprocessing: 
+- Clean and tokenize job titles.
+2. Embeddings:
+- Generate job title embeddings using BERT and Doc2Vec.
+- Generate keyword embeddings using same techniques.
+3. Similarity Scoring:
+- Compute cosine similarity between job titles and keywords.
+- Apply weighted average of BERT and Doc2Vec scores based on user-defined preference.
+4. Ranking:
+- Candidates sorted in descending order of weighted score.
+- User can “⭐ star” candidates to re-rank list using this supervised feedback.
+5. Re-Ranking Logic:
+- After starring, the ideal candidate vector is used to re-score remaining candidates based on vector proximity.
 
 📊 Dataset
 Source: Internal talent sourcing dataset (anonymized)
@@ -39,19 +40,19 @@ connections: Number of professional connections
 fit: Target label (float 0-1, optional)
 
 ✅ Goals
-Rank candidates based on similarity to keywords like "Aspiring human resources".
-Dynamically re-rank based on starred (preferred) candidates.
-Enable thresholding and filtering of irrelevant candidates.
-Reduce manual review time while enhancing match quality.
+1. Rank candidates based on similarity to keywords like "Aspiring human resources".
+2. Dynamically re-rank based on starred (preferred) candidates.
+3. Enable thresholding and filtering of irrelevant candidates.
+4. Reduce manual review time while enhancing match quality.
 
 📈 Success Metrics
-Initial ranking quality (semantic match accuracy)
-Improvement after starring (list convergence)
-Cut-off threshold effectiveness (filtering irrelevant candidates)
-Reduction in manual effort
+1. Initial ranking quality (semantic match accuracy).
+2. Improvement after starring (list convergence).
+3. Cut-off threshold effectiveness (filtering irrelevant candidates).
+4. Reduction in manual effort.
 
 🔁 Future Extensions
-Build interactive dashboard for sourcing teams
-Integrate LinkedIn scraping (compliant with TOS)
-Apply clustering for candidate segmentation
-Use fine-tuned domain-specific BERT models (e.g., JobBERT)
+1. Build interactive dashboard for sourcing teams.
+2. Integrate LinkedIn scraping (compliant with TOS).
+3. Apply clustering for candidate segmentation.
+4. Use fine-tuned domain-specific BERT models (e.g., JobBERT).
